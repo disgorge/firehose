@@ -1,0 +1,12 @@
+Cloudwatch logs to slack wrapper: https://github.com/keetonian/cw-logs-to-slack
+
+Ingest to CloudWatch:
+
+Option 1 [server level]: cat "This will be logged and sent to slack" >> /tmp/log/firehose from primary PC (Agent server only)
+Option 2 [user level]: pip install awscli-cwlogs && aws configure set plugins.cwlogs cwlogs && echo "This will be logged and sent to slack" | aws logs push --log-group-name notifications --log-stream-name firehose
+Option 3 [application level]: pip install watchtower
+
+Slack notifications:
+- Desktop popups
+- Mobile popups
+- Channel review after the fact
