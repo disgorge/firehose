@@ -5,6 +5,7 @@ Ingest to CloudWatch:
 Option 1 [server level]: cat "This will be logged and sent to slack" >> /tmp/log/firehose from primary PC (Agent server only)
 Option 2 [user level]: pip install awscli-cwlogs && aws configure set plugins.cwlogs cwlogs && echo "This will be logged and sent to slack" | aws logs push --log-group-name notifications --log-stream-name firehose
 Option 3 [application level]: pip install watchtower
+Option 4 [Remote API]: curl -H "Content-Type: application/json" -X POST -d "[\"this will post to slack\"]" https://firehose.domain.com/serverlessrepo-cw-logs-to-slack-lamb-LambdaToSlack-1M6QLO8JMUO2K
 
 Slack notifications:
 - Desktop popups
