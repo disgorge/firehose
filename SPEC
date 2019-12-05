@@ -10,3 +10,9 @@ Slack notifications:
 - Desktop popups
 - Mobile popups
 - Channel review after the fact
+
+Sources to log:
+- HomeAssistant
+- Django projects
+- Upwork Messages
+- VIP Emails
